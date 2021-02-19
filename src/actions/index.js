@@ -8,7 +8,7 @@ export const SET_ERROR = 'SET_ERROR';
 export const fetchSmurfs = () => dispatch => {
   dispatch({
     type: FETCH_SMURFS_START,
-  })
+  })Expl
   axios
     .get(`http://localhost:3333/smurfs`)
     .then((res) => {
@@ -25,7 +25,7 @@ export const fetchSmurfs = () => dispatch => {
 export const addSmurf = (smurf) => dispatch => {
   if ( smurf.name === '' || smurf.nickname === '' || smurf.description === '' ){
     dispatch({
-      type: SET_ERROR, payload: "Name, position, and nickname are required fields."
+      type: SET_ERROR, payload: "Name, Position and Nickname are required fields."
     });
     return
   }
