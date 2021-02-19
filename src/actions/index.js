@@ -23,7 +23,7 @@ export const fetchSmurfs = () => dispatch => {
 }
 
 export const addSmurf = (smurf) => dispatch => {
-  if ( smurf.name === '' || smurf.nickname === '' || smurf.description === '' ){
+  if ( smurf.name === '' || smurf.nickname === '' || smurf.position === '' ){
     dispatch({
       type: SET_ERROR, payload: "Name, Position and Nickname are required fields."
     });
